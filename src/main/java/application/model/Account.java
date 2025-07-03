@@ -4,14 +4,15 @@ import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
-@Entity(name = "tb_account")
+@Entity()
+@Table(name = "tb_account")
 public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JoinColumn(name = "user_id", unique = true)
+    @Column(unique = true, nullable = false, length = 8)
     private String number;
 
     @Column(precision = 13, scale = 2)
