@@ -1,9 +1,12 @@
 package application.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 
+@Data
 @Entity()
 @Table(name = "tb_account")
 public class Account {
